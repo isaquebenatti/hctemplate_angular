@@ -1,0 +1,258 @@
+body{
+    background-color: #f5f4ff;
+}
+
+div.container{
+    padding:65px;
+}
+
+.navbar-default{
+    background: #007bff!important;
+    color: #FFF;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #FFF;
+}
+.navbar-default .navbar-brand {
+    color: #FFF;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #555;
+    background-color: #f9ecfb;
+}
+.content {
+    min-height: 250px;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.jumbotron {
+    background-color: #ecf0f5;
+    text-align: center;
+}
+
+.welcome-jumbotron h1 {
+    margin-bottom: 60px;
+}
+
+.welcome-jumbotron p {
+    margin-bottom: 60px;
+    font-size: 30px;
+}
+
+.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+.agent{
+    height: 120px;
+}
+.place-info-box {
+    color: #555;
+    display: block;
+    min-height: 120px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.content-header {
+    position: relative;
+    padding: 15px 15px 15px 15px;
+}
+
+.content-header>h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.place-info-select{
+    display: block;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    padding: 7px;
+    width:100%
+}
+
+.form-control{
+    margin-left: 10px;
+    padding: 2px 9px;
+    max-width: 100%;
+    max-height: 64px;
+}
+
+.place-info-textarea{
+    width:73%;
+    min-height: 110px;
+    float:left;
+}
+
+button{
+    margin-top:12px;
+}
+
+#add{
+    padding: 12px 44px;
+    margin-left:30px;
+    float:left;
+}
+
+.checkbox{
+    position: absolute;
+    margin-top: 46px;
+    margin-left:20px;
+}
+
+.checkarea{
+    width:55px;
+    min-height: 126px;
+    box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    float:left;
+    overflow: hidden;
+}
+
+.place-info-box-text {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    width: 20%;
+    float: left;
+    margin-left: 30px;
+    margin-top:10px;
+}
+.area-lb{
+    width:23%;
+    height: 70px;
+    float:left;
+}
+.place-info-box-texta{
+    display:block;
+    min-height:47px;
+    margin-left:55px;
+}
+
+.place-info-box-span{
+    display:block;
+    min-height:67px;
+    margin-left:55px;
+}
+.area-lb-label{
+    width:100%;
+    height:45px;
+}
+.area-history{
+    width: 100%;
+    height: 28px;
+}
+.place-info-box-lb{
+    margin-left:30px;
+    margin-top:5px;
+}
+
+.place-info-box-a{
+    height: 50px;
+    width:50px;
+    float:left;
+    margin-top: 45px;
+}
+.area-history i{
+    margin-right: 4px;
+}
+.place-info-box-lb-textarea{
+    width:46%;
+    float:left;
+    min-height: 66px;
+    margin-left: 21px;
+    display:block;
+}
+
+#history{
+    margin-left: 15px;
+}
+
+.container-history{
+    color: #555;
+    display: block;
+    height: 200px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.status{
+    margin-left:300px;
+    display:block;
+}
+
+.place-info-box-status{
+    display:block;
+    min-height: 66px;
+    float:left;
+    width:13%;
+    margin-left:53px;
+}
+
+.radio{
+    margin-top: -4px;
+}
+
+.place-info-box-button{
+    display:block;
+    min-height: 72px;
+    float:left;
+    width:10%;
+}
+
+#addunique{
+    padding:12px 30px;
+    margin:-3px;
+    display:block;
+}
+
+.place-info-status-area{
+    width:27%;
+    min-height: 31px;
+    float:left;
+}
+
+.status2{
+    width:23%;
+    overflow:visible;
+    margin-top: -4px;
+}
+
+.radio2{
+    margin-left:31px;
+}
+
+#firstarea{
+    min-height: 97px;
+    max-min-height: none;
+}
+
+.area-history a{
+    cursor:pointer;
+    float:left;
+}

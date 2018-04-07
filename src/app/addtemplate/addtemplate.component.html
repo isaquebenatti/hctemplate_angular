@@ -1,0 +1,44 @@
+<div class="container">
+    <section class="content-header">
+        <h1>
+          Add Template
+        </h1>
+    </section>
+
+    <div class="row">
+        <div *ngIf="!agents" class="col-sm-12 col-xs-12">
+                <div class="place-info-box">
+                  <div class="place-info-select">
+                      <span class="place-info-select text-info bg-primary">Select the ITM agents with the same template</span>
+                      <div class="place-info-textarea">
+                          <div class="form-group">
+                              <textarea required rows="3" col="5" maxlength="1500" id="firstarea" class="form-control" placeholder="Write here your template."></textarea>
+                          </div>
+                      </div>
+                      <div class="place-info-status-area">
+                        <label class="place-info-box-text status2">status</label>
+                      </div>
+                      <div class="place-info-box-status radio2">
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">Online</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">Removed</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">Inprogress</label>
+                        </div>
+                        </div>
+                        <div class="place-info-box-button">
+                            <button id="addunique" type="button" class="btn btn-success">Add</button>
+                        </div>
+                  </div>
+                  <!-- /.info-box-content -->
+                </div>
+              <!-- /.info-box -->
+        </div>
+        <div *ngFor="let agent of agents" class="col-sm-12 col-xs-12">
+          <hc-agent [agent]="agent"></hc-agent>
+        </div>
+    </div>
+</div>

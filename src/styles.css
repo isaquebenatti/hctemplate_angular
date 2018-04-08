@@ -53,9 +53,6 @@ p {
     margin: 0 0 10px;
 }
 
-.agent{
-    height: 120px;
-}
 .place-info-box {
     color: #555;
     display: block;
@@ -114,6 +111,7 @@ button{
     position: absolute;
     margin-top: 46px;
     margin-left:20px;
+    float:left;
 }
 
 .checkarea{
@@ -134,7 +132,7 @@ button{
     text-overflow: ellipsis;
     margin-bottom: 10px;
     text-transform: uppercase;
-    width: 20%;
+    width:100%;
     float: left;
     margin-left: 30px;
     margin-top:10px;
@@ -144,12 +142,37 @@ button{
     height: 70px;
     float:left;
 }
-.place-info-box-texta{
+.agent-box{
     display:block;
-    min-height:47px;
-    margin-left:55px;
+    min-height:126px;
+    float:left;
+    width:300px;
+    /*margin-left:55px;*/
 }
 
+.status-box{
+    width:175px;
+    min-height: 126px;
+    float:left;
+}
+.radio-box{
+    margin-left: 30px;
+}
+.add-box{
+    width:112px;
+    min-height: 126px;
+    float:left;
+}
+#add-agent{
+    padding: 12px 30px;
+    margin:auto;
+    margin-top:43px;
+    display: block;
+}
+.template{
+    margin-left:30px;
+    max-width: 92%;
+}
 .place-info-box-span{
     display:block;
     min-height:67px;
@@ -159,13 +182,12 @@ button{
     width:100%;
     height:45px;
 }
-.area-history{
-    width: 100%;
-    height: 28px;
-}
+
 .place-info-box-lb{
     margin-left:30px;
     margin-top:5px;
+    margin-bottom: 28px;
+    width:100%;
 }
 
 .place-info-box-a{
@@ -174,19 +196,11 @@ button{
     float:left;
     margin-top: 45px;
 }
-.area-history i{
-    margin-right: 4px;
-}
-.place-info-box-lb-textarea{
-    width:46%;
-    float:left;
-    min-height: 66px;
-    margin-left: 21px;
-    display:block;
-}
 
-#history{
-    margin-left: 15px;
+.template-box{
+    width:35%;
+    float:left;
+    min-height: 127px;
 }
 
 .container-history{
@@ -249,10 +263,10 @@ button{
 
 #firstarea{
     min-height: 97px;
-    max-min-height: none;
+    max-height: none;
 }
 
-.area-history a{
+.history{
     cursor:pointer;
-    float:left;
+    margin-left: 30px;
 }

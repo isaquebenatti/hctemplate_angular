@@ -9,10 +9,13 @@
               <label class="place-info-box-lb">{{agent.agent}}</label>
               <a class="history"><i class="fa fa-caret-down"></i>History</a>
           </div>
+          {{form.valid}}
+          {{form.value | json}}
+          <form #form="ngForm" novalidate>
           <div class="template-box">
               <label class="place-info-box-text">template</label>
               <div class="form-group">
-                  <textarea required rows="3" class="form-control template" col="5" maxlength="1500" placeholder="Last update:{{agent.template}}"></textarea>
+                  <textarea name="template" required rows="3" class="form-control template" col="5" maxlength="1500" placeholder="Last update:{{agent.template}}" ngModel></textarea>
               </div>
           </div>
           <div class="status-box">
@@ -29,9 +32,11 @@
                   </div>
               </div>
           </div>
+          </form>
           <div class="add-box">
               <button id="add-agent" type="button" class="btn btn-success">Add</button>
           </div>
+
         </div>
       <!-- /.info-box -->
 <!--  <div class="container-history" id="1">

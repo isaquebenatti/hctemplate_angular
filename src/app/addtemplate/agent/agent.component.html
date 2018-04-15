@@ -1,4 +1,7 @@
         <div class="place-info-box agent">
+          {{form.valid}}
+          {{form.value | json}}
+          <form #form="ngForm" novalidate>
           <div class="checkarea">
               <div class="checkbox">
                 <label><input type="checkbox" value=""></label>
@@ -6,36 +9,33 @@
           </div>
           <div class="agent-box">
               <label class="place-info-box-text">agent name</label>
-              <label class="place-info-box-lb">{{agent.agent}}</label>
+              <label name="agent" class="place-info-box-lb" ngModel="{{agent.agent}}">{{agent.agent}}</label>
               <a class="history"><i class="fa fa-caret-down"></i>History</a>
           </div>
-          {{form.valid}}
-          {{form.value | json}}
-          <form #form="ngForm" novalidate>
           <div class="template-box">
               <label class="place-info-box-text">template</label>
               <div class="form-group">
-                  <textarea name="template" required rows="3" class="form-control template" col="5" maxlength="1500" placeholder="Last update:{{agent.template}}" ngModel></textarea>
+                  <textarea name="description" required rows="3" class="form-control template" col="5" maxlength="1500" placeholder="Last update: {{agent.description}}" ngModel [value]="description_ta"></textarea>
               </div>
           </div>
           <div class="status-box">
               <label class="place-info-box-text">status</label>
               <div class="radio-box">
                   <div class="radio">
-                      <label><input type="radio" name="optradio">Online</label>
+                      <label><input required type="radio" name="status" value="ON" ngModel>Online</label>
                   </div>
                   <div class="radio">
-                      <label><input type="radio" name="optradio">Removed</label>
+                      <label><input required type="radio" name="status" value="REM" ngModel>Removed</label>
                   </div>
                   <div class="radio">
-                      <label><input type="radio" name="optradio">Inprogress</label>
+                      <label><input required type="radio" name="status" value="INP" ngModel>Inprogress</label>
                   </div>
               </div>
           </div>
-          </form>
           <div class="add-box">
-              <button id="add-agent" type="button" class="btn btn-success">Add</button>
+              <button (click)="addTemplate(form.value)" id="add-agent" type="button" class="btn btn-success" [disabled]="!form.valid || form.value.description === null">Add</button>
           </div>
+          </form>
 
         </div>
       <!-- /.info-box -->

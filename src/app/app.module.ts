@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import {RouterModule} from '@angular/router';
-import {FormsModule} from '@angular/forms'
-
+import {FormsModule, ReactiveFormsModule } from '@angular/forms'
+import {MatSnackBarModule, MatNativeDateModule} from '@angular/material'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ROUTES} from './app.routes'
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,12 +19,15 @@ import { AddtemplateService} from './addtemplate/addtemplate.service';
     HeaderComponent,
     HomeComponent,
     AddtemplateComponent,
-    AgentComponent
+    AgentComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [AddtemplateService],

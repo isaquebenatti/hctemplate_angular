@@ -1,5 +1,17 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 body{
     background-color: #f5f4ff;
+}
+
+.mat-snack-bar-container {
+    background: #77d86c;
+    color: #fff;
+}
+
+.mat-simple-snackbar {
+    font-size: 15px;
+    font-weight: 700;
 }
 
 div.container{

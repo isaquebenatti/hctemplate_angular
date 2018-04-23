@@ -4,7 +4,7 @@
           <form [formGroup]="agentForm" novalidate>
           <div class="checkarea">
               <div class="checkbox">
-                <label><input type="checkbox" value=""></label>
+                <label><input type="checkbox" formControlName="selected"></label>
               </div>
           </div>
           <div class="agent-box">
@@ -22,18 +22,18 @@
               <label class="place-info-box-text">status</label>
               <div class="radio-box">
                   <div class="radio">
-                      <label><input type="radio" formControlName="status" value="ON" ngModel>Online</label>
+                      <label><input type="radio" formControlName="status" value="0" ngModel>Online</label>
                   </div>
                   <div class="radio">
-                      <label><input type="radio" formControlName="status" value="REM" ngModel>Removed</label>
+                      <label><input type="radio" formControlName="status" value="2" ngModel>Removed</label>
                   </div>
                   <div class="radio">
-                      <label><input type="radio" formControlName="status" value="INP" ngModel>Inprogress</label>
+                      <label><input type="radio" formControlName="status" value="1" ngModel>Inprogress</label>
                   </div>
               </div>
           </div>
           <div class="add-box">
-              <button (click)="addTemplate(agentForm.value)" id="add-agent" type="button" class="btn btn-success" [disabled]="!agentForm.valid">Add</button>
+              <button (click)="addTemplate(agentForm.value)" id="add-agent" type="button" class="btn btn-success" [disabled]="!agentForm.valid || agentForm.value.selected === true">Add</button>
           </div>
           </form>
 

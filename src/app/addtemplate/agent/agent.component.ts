@@ -16,30 +16,34 @@ export class AgentComponent implements OnInit {
   constructor(private addTemplateService: AddtemplateService, private formBuilder: FormBuilder, public snackBar: MatSnackBar) { }
 
   ngOnInit() {
-    this.agentForm = this.formBuilder.group({
-      customer: this.formBuilder.control(this.agent.customer),
-      agent: this.formBuilder.control(this.agent.agent),
-      description: this.formBuilder.control('', [Validators.required]),
-      status: this.formBuilder.control('', [Validators.required])
-    })
+    /*if (this.agentForm.value.selected === false){*/
+      this.agentForm = this.formBuilder.group({
+        selected: this.formBuilder.control(''),
+        customer: this.formBuilder.control(this.agent.customer),
+        agent: this.formBuilder.control(this.agent.agent),
+        description: this.formBuilder.control('', [Validators.required]),
+        status: this.formBuilder.control('', [Validators.required])
+      })
+  //  }
+
+
+
 
   }
 
   addTemplate(agent: Agent){
-  this.addTemplateService.addTemplate(agent).subscribe((agentId:string) =>{
-    console.log(`Template adicionado via POST: ${agentId}`)
-    this.description_ta = null
-    this.agentForm.reset()
-    this.agentForm.patchValue({
-      customer: this.agent.customer,
-      agent: this.agent.agent
-    });
-    this.snackBar.open('Message archived');
-    /*this.snackBar.openFromComponent(SuccessComponent, {
-      duration: 500,
-    });*/
-    console.log(agent)
-  })
-
+    this.addTemplateService.addTemplate(agent).subscribe((agentId:string) =>{
+      console.log(`Template adicionado via POST: ${agentId}`)
+      this.description_ta = null
+      this.agentForm.reset()
+      this.agentForm.patchValue({
+        customer: this.agent.customer,
+        agent: this.agent.agent
+      });
+      this.snackBar.open('Success added!', '', {
+        duration: 2000
+      });
+      console.log(agent)
+    })
   }
 }
